@@ -1,0 +1,17 @@
+@import 'reset';
+@import 'mixins';
+
+html {
+	font-family: Poppins, Helvetica, sans-serif;
+}
+
+body {
+	background: #F4F4F4;
+}
+
+button {
+	border: none;
+	&:focus {
+		outline: none;
+	}
+}

@@ -1,0 +1,45 @@
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .3rem .75rem;
+    margin: .375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.no_margin {
+    margin: 0;
+}
+
+.primary {
+    background: #0062FF;
+    color: #FAFAFB;
+
+    &:active {
+        background: #0062cc;
+        border-color: #005cbf;
+        color: #FAFAFB;
+    }
+}
+
+.outline {
+    border: 1px solid #0062FF;
+    color: #0062FF;
+    &:active {
+        background-color: #0062FF;
+        border-color: #007bff;
+        color: #FAFAFB;
+    }
+}

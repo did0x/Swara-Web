@@ -1,0 +1,62 @@
+{
+  "name": "swara",
+  "version": "1.0.0",
+  "description": "Online Concert Streaming platform ",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "crypto-js": "^4.0.0",
+    "moment": "^2.26.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.1",
+    "react-slidez": "0.0.31",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "shx": "^0.3.2",
+    "stacktrace-gps": "^3.0.4",
+    "stacktrace-js": "^2.0.2"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "revert:index": "rm -rf public/index.html && cp public/tmpl.html public/index.html",
+    "append:release": "bash bash/release.sh",
+    "append:metatags": "bash bash/meta.sh",
+    "append:metatags-dev": "bash bash/meta.dev.sh",
+    "react:start": "cross-env react-app-rewired start",
+    "start": "npm-run-all append:metatags-dev react:start",
+    "react:build-prod": "cross-env react-app-rewired build",
+    "react:build-stage": "env-cmd -f .env.staging cross-env react-app-rewired build",
+    "create:build": "shx rm -rf dist/production && shx mkdir dist/production",
+    "copy:build": "shx cp -R build/* dist/production",
+    "build:prod": "npm run",
+    "build:stage": "npm-run-all revert:index react:build-stage create:build append:release append:metatags copy:build",
+    "build": "npm-run-all revert:index react:build-stage append:release append:metatags",
+    "deploy": "bash bash/build.sh",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "dynamic-cdn-webpack-plugin": "^4.0.0",
+    "env-cmd": "^10.1.0",
+    "module-to-cdn": "^3.1.5",
+    "react-app-rewired": "^2.1.6",
+    "source-map-explorer": "^2.4.2"
+  },
+  "author": "Ridho Saputra",
+  "license": "ISC"
+}

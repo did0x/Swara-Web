@@ -1,0 +1,20 @@
+@mixin tablet-view() {
+	@media (min-device-width: 768px) and (max-device-width: 1366px) and (orientation: landscape) and (max-device-aspect-ratio: 15/9) {
+		@content;
+	}
+}
+@mixin notch-view() {
+	@media (orientation: landscape) and (min-device-aspect-ratio: 17/9) {
+		@content;
+	}
+}
+@mixin desktop-view() {
+	@media (orientation: landscape) and (min-device-width: 1367px) {
+		@content;
+	}
+}
+@mixin phone-view() {
+	@media (orientation: landscape) and (max-device-width: 820px) {
+		@content;
+	}
+}

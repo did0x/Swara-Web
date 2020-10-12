@@ -1,0 +1,125 @@
+.search {
+    display: flex;
+    padding-left: 160px;
+    padding-right: 160px;
+    margin-top: 40px;
+
+    &_side {
+        margin: 0 16px;
+
+        .radio_group {
+            background-color: #FFFFFF;
+            padding: 12px;
+            border-radius: 10px;
+
+            h4 {
+                margin-bottom: 24px;
+                margin-left: 16px;
+                margin-right: 16px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                color: #000000;
+            }
+
+            fieldset {
+                display: flex;
+                flex-wrap: wrap;
+
+                label {
+                    width: 45%;
+                    margin: 8px;
+                }
+            }
+        }
+
+        .filter_group {
+            background-color: #FFFFFF;
+            padding: 12px;
+            border-radius: 10px;
+
+            .group_header {
+                display: flex;
+                justify-content: space-between;
+
+                h4 {
+                    margin-bottom: 24px;
+                    margin-left: 16px;
+                    margin-right: 16px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #000000;
+                }
+
+                p {
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #0062FF;
+                }
+            }
+        }
+    }
+
+    &_content {
+        width: 100%;
+
+        h2 {
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 36px;
+            color: #696974;
+            margin-bottom: 21px;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+
+            &_card {
+                position: relative;
+                max-width: 256px;
+                background: #FFFFFF;
+                border-radius: 10px;
+                margin-bottom: 72px;
+
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+
+                .date_text {
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #92929D;
+                    margin-left: 16px;
+                    margin-right: 16px;
+                    margin-top: 18px;
+                }
+
+                .title_text {
+                    font-weight: bold;
+                    font-size: 22px;
+                    line-height: 26px;
+                    color: #171725;
+                    margin-left: 16px;
+                    margin-right: 16px;
+                    margin-top: 14px;
+                    min-height: 64px;
+                }
+
+                .ticket_text {
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 16px;
+                    color: #FF974A;
+                    margin-left: 16px;
+                    margin-right: 16px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
